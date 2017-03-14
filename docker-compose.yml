@@ -1,0 +1,12 @@
+# Base config
+version: '3'
+
+services:
+  mercari-php:
+    image: php:7.1-cli
+    container_name: mercari-php
+    hostname: php
+    volumes:
+     - .:/code
+    working_dir: /code
+    command: sh /code/start.sh
