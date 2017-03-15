@@ -2,34 +2,36 @@
 
 namespace Mercari;
 
+use Carbon\Carbon;
+
 /**
  * Display period value object
  */
 class DisplayPeriod
 {
     /**
-     * @var string
+     * @var Carbon
      */
-    private $startTime;
+    private $startDate;
 
     /**
-     * @var string
+     * @var Carbon
      */
-    private $endTime;
+    private $endDate;
 
-    public function construct__(string $startTime, string $endTime)
+    public function __construct(Carbon $startDate, Carbon $endDate)
     {
-        $this->startTime = $startTime;
-        $this->endTime = $endTime;
+        $this->startDate = $startDate;
+        $this->endDate = $endDate;
     }
 
-    public function getStartTime(): string
+    public function getStartDate(): Carbon
     {
-        return $this->startTime;
+        return $this->startDate;
     }
 
-    public function getEndTime(): string
+    public function getEndDate(): Carbon
     {
-        return $this->endTime;
+        return $this->endDate;
     }
 }
