@@ -1,4 +1,4 @@
-Mercari PHP Skills Test
+PHP Banner Example
 ===============
 
 Installation
